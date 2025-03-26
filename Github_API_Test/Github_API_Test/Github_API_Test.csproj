@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Requests\CreateIssueRequest.cs" />
+    <Compile Include="GithubRequest.cs" />
+    <Compile Include="Models\Requests\GraphQLQuerys.cs" />
+    <Compile Include="Models\Requests\GraphQLRequest.cs" />
+    <Compile Include="Models\Requests\SingleSelectFieldRequest.cs" />
+    <Compile Include="Models\Responces\CanbanIssiesResponce.cs" />
+    <Compile Include="Models\Responces\FieldValue.cs" />
+    <Compile Include="Models\Responces\FieldValueNode.cs" />
+    <Compile Include="Models\Responces\IssueResponse.cs" />
+    <Compile Include="Models\Responces\Node.cs" />
+    <Compile Include="Models\Responces\SingleSelectFieldResponce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Responces\UserProjectResponse.cs" />
+    <Compile Include="Models\Requests\UserProjectsRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
